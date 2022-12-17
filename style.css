@@ -18,3 +18,19 @@
 .colored {
     background-color: black;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+button {
+    background-color: white;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin-top: -5px;
+}

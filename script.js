@@ -16,3 +16,12 @@ const squares = document.querySelectorAll('.square')
 squares.forEach(square => square.addEventListener('mouseover', () => {
     square.classList.add('colored');
 }));
+
+// Get buttons
+const editButton = document.querySelector('#edit');
+const clearButton = document.querySelector('#clear');
+
+// Clear grid when clear button is clicked
+clearButton.addEventListener('click', () => {
+    squares.forEach(square => square.classList.remove('colored'));
+});
