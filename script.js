@@ -38,8 +38,9 @@ clearButton.addEventListener('click', () => {
     squares.forEach(square => square.classList.remove('colored'));
 });
 
-// const editButton = document.querySelector('#edit');
-// editButton.addEventListener('click', () => {
-//     squares.forEach(square => square.remove());
-//     askForSquares();
-// });
+// Ask for new size of grid
+const editButton = document.querySelector('#edit');
+editButton.addEventListener('click', () => {
+    squares.forEach(square => square.remove());
+    // Add in code to redo square generation process...
+});
