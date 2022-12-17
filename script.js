@@ -32,10 +32,11 @@ function addEventListeners() {
 
 addEventListeners();
 
-// const clearButton = document.querySelector('#clear');
-// clearButton.addEventListener('click', () => {
-//     squares.forEach(square => square.classList.remove('colored'));
-// });
+// Clear board when clicked
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', () => {
+    squares.forEach(square => square.classList.remove('colored'));
+});
 
 // const editButton = document.querySelector('#edit');
 // editButton.addEventListener('click', () => {
