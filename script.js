@@ -26,7 +26,8 @@ let squares = document.querySelectorAll('.square'); // Get all square divs
 // Add event listeners for all squares
 function addEventListeners() {
     squares.forEach(square => square.addEventListener('mouseover', () => {
-        square.classList.add('colored');
+        var randomColor = Math.floor(Math.random()*16777215).toString(16); // Generate a random hexadecimal-formatted color
+        square.style.backgroundColor = `#${randomColor}`;
     }));
 }
 
@@ -35,7 +36,7 @@ addEventListeners();
 // Clear board when clicked
 const clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', () => {
-    squares.forEach(square => square.classList.remove('colored'));
+    squares.forEach(square => square.style.backgroundColor = 'white'); // Set all squares to white
 });
 
 const editButton = document.querySelector('#edit');
