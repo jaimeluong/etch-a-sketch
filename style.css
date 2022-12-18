@@ -12,10 +12,9 @@
     border: 1px solid black;
 }
 
- .square {
+.square {
     background-color: white;
 }
-
 
 .buttons {
     display: flex;
@@ -24,11 +23,11 @@
 }
 
 button {
-    margin-top: -5px;
+    margin-top: -10px;
     margin-bottom: 5px;
     background-color: white;
 }
 
 h2 {
-    margin-top: -5px;
+    margin-top: -10px;
 }
