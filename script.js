@@ -4,24 +4,24 @@ const container = document.querySelector('.container');
 let squaresPerSide;
 
 // Set number of squares per side
-function askForSquares() {
+function askForSquares() { // Function definition
     squaresPerSide = prompt("How many squares per side?");
     generateSquares(squaresPerSide);
 }
 
 // Generate squares in memory and place in container
-function generateSquares(num) {
+function generateSquares(num) { // Function definition
     for(var i=0; i<num*num; i++) {
         const square = document.createElement('div');
         square.setAttribute('style', `height: ${800/num}px; width: ${800/num}px;`);
         square.classList.add('square');
-        container.appendChild(square); // Placed onto HTML
+        container.appendChild(square); // Place onto HTML
     }
 }
 
-askForSquares();
+askForSquares(); // Upon page load, run askForSquares() once
 
-const squares = document.querySelectorAll('.square');
+let squares = document.querySelectorAll('.square'); // Get all square divs
 
 // Add event listeners for all squares
 function addEventListeners() {
@@ -38,9 +38,10 @@ clearButton.addEventListener('click', () => {
     squares.forEach(square => square.classList.remove('colored'));
 });
 
-// Ask for new size of grid
 const editButton = document.querySelector('#edit');
 editButton.addEventListener('click', () => {
-    squares.forEach(square => square.remove());
-    // Add in code to redo square generation process...
+    squares.forEach(square => square.remove()); // Remove each div in nodelist
+    askForSquares(); // Prompt user for number of squares again
+    squares = document.querySelectorAll('.square'); // Reassign squares nodelist
+    addEventListeners(); // Add new event listeners
 });
